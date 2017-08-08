@@ -11,8 +11,8 @@
 	<tr> <td><%= stu.name%></td> <td><%= stu.age%></td> <td><%= link_to 'Show', stu %>&nbsp;<%= link_to 'Edit', edit_student_path(stu) %>&nbsp;<%= link_to 'Destroy', stu, method: :delete, data: { confirm: 'Are you sure?' } %></td></tr>
 	<% end %>
 </table>
-
-<%= link_to 'New Student', new_student_path %>
+<!-- new_student_path(:grade_id => @grade.id) -->
+<%= link_to 'New Student', new_student_path(grade_id: @grade.id) %>
 <br>
 <%= link_to 'Edit', edit_grade_path(@grade) %>
 <%= link_to 'Back', grades_path %>
